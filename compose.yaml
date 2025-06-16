@@ -25,6 +25,10 @@ services:
       - 4317:4317 # OTLP gRPC endpoint
       - 4318:4318 # OTLP HTTP endpoint
 
+  zipkin:
+    image: openzipkin/zipkin:latest
+    ports:
+      - 9411:9411
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the
